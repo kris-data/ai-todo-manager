@@ -122,7 +122,7 @@ const LoginPage = () => {
                 생각보다 실행에 집중하세요
               </h2>
               <p className="text-white/90 text-lg leading-relaxed">
-                AI가 도와주는 스마트한 할 일 관리로 <br />
+                AI가 도와주는 영리한 할 일 관리로 <br />
                 생산성을 한 단계 높여보세요.
               </p>
             </div>
