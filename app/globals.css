@@ -1,0 +1,170 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  --radius: 0.625rem;
+  
+  /* 배경 및 텍스트 - Slate 계열 */
+  --background: oklch(0.99 0 0); /* slate-50 */
+  --foreground: oklch(0.282 0.013 256.848); /* slate-900 */
+  
+  /* 카드 */
+  --card: oklch(1 0 0); /* white */
+  --card-foreground: oklch(0.282 0.013 256.848); /* slate-900 */
+  
+  /* 팝오버 */
+  --popover: oklch(1 0 0); /* white */
+  --popover-foreground: oklch(0.282 0.013 256.848); /* slate-900 */
+  
+  /* Primary - Blue 500 (#3B82F6) */
+  --primary: oklch(0.585 0.207 257.418);
+  --primary-foreground: oklch(1 0 0); /* white */
+  
+  /* Secondary - Violet 500 (#8B5CF6) */
+  --secondary: oklch(0.569 0.238 296.226);
+  --secondary-foreground: oklch(1 0 0); /* white */
+  
+  /* Muted - Slate 계열 */
+  --muted: oklch(0.96 0.002 256.848); /* slate-100 */
+  --muted-foreground: oklch(0.521 0.012 256.848); /* slate-500 */
+  
+  /* Accent - Emerald 500 (#10B981) */
+  --accent: oklch(0.698 0.17 166.219);
+  --accent-foreground: oklch(1 0 0); /* white */
+  
+  /* Destructive - Red 500 (#EF4444) */
+  --destructive: oklch(0.628 0.257 27.325);
+  --destructive-foreground: oklch(1 0 0); /* white */
+  
+  /* 보더 및 입력 */
+  --border: oklch(0.898 0.005 256.848); /* slate-200 */
+  --input: oklch(0.898 0.005 256.848); /* slate-200 */
+  --ring: oklch(0.585 0.207 257.418); /* primary와 동일 */
+  
+  /* 차트 컬러 */
+  --chart-1: oklch(0.585 0.207 257.418); /* blue */
+  --chart-2: oklch(0.569 0.238 296.226); /* violet */
+  --chart-3: oklch(0.698 0.17 166.219); /* emerald */
+  --chart-4: oklch(0.807 0.148 99.574); /* amber */
+  --chart-5: oklch(0.628 0.257 27.325); /* red */
+  
+  /* 사이드바 */
+  --sidebar: oklch(1 0 0); /* white */
+  --sidebar-foreground: oklch(0.282 0.013 256.848); /* slate-900 */
+  --sidebar-primary: oklch(0.585 0.207 257.418); /* blue-500 */
+  --sidebar-primary-foreground: oklch(1 0 0); /* white */
+  --sidebar-accent: oklch(0.96 0.002 256.848); /* slate-100 */
+  --sidebar-accent-foreground: oklch(0.282 0.013 256.848); /* slate-900 */
+  --sidebar-border: oklch(0.898 0.005 256.848); /* slate-200 */
+  --sidebar-ring: oklch(0.585 0.207 257.418); /* blue-500 */
+}
+
+.dark {
+  /* 배경 및 텍스트 */
+  --background: oklch(0.172 0.013 256.848); /* slate-900 */
+  --foreground: oklch(0.985 0.002 256.848); /* slate-50 */
+  
+  /* 카드 */
+  --card: oklch(0.231 0.013 256.848); /* slate-800 */
+  --card-foreground: oklch(0.985 0.002 256.848); /* slate-50 */
+  
+  /* 팝오버 */
+  --popover: oklch(0.231 0.013 256.848); /* slate-800 */
+  --popover-foreground: oklch(0.985 0.002 256.848); /* slate-50 */
+  
+  /* Primary - Blue 400 (다크모드에서는 더 밝게) */
+  --primary: oklch(0.693 0.178 257.418);
+  --primary-foreground: oklch(0.172 0.013 256.848); /* slate-900 */
+  
+  /* Secondary - Violet 400 */
+  --secondary: oklch(0.663 0.233 296.226);
+  --secondary-foreground: oklch(0.172 0.013 256.848); /* slate-900 */
+  
+  /* Muted */
+  --muted: oklch(0.290 0.013 256.848); /* slate-700 */
+  --muted-foreground: oklch(0.635 0.010 256.848); /* slate-400 */
+  
+  /* Accent - Emerald 400 */
+  --accent: oklch(0.761 0.158 166.219);
+  --accent-foreground: oklch(0.172 0.013 256.848); /* slate-900 */
+  
+  /* Destructive - Red 400 */
+  --destructive: oklch(0.697 0.221 27.325);
+  --destructive-foreground: oklch(0.985 0.002 256.848); /* slate-50 */
+  
+  /* 보더 및 입력 */
+  --border: oklch(0.35 0.013 256.848); /* slate-600 */
+  --input: oklch(0.35 0.013 256.848); /* slate-600 */
+  --ring: oklch(0.693 0.178 257.418); /* primary와 동일 */
+  
+  /* 차트 컬러 (다크모드) */
+  --chart-1: oklch(0.693 0.178 257.418); /* blue */
+  --chart-2: oklch(0.663 0.233 296.226); /* violet */
+  --chart-3: oklch(0.761 0.158 166.219); /* emerald */
+  --chart-4: oklch(0.855 0.134 99.574); /* amber */
+  --chart-5: oklch(0.697 0.221 27.325); /* red */
+  
+  /* 사이드바 */
+  --sidebar: oklch(0.231 0.013 256.848); /* slate-800 */
+  --sidebar-foreground: oklch(0.985 0.002 256.848); /* slate-50 */
+  --sidebar-primary: oklch(0.693 0.178 257.418); /* blue-400 */
+  --sidebar-primary-foreground: oklch(0.172 0.013 256.848); /* slate-900 */
+  --sidebar-accent: oklch(0.290 0.013 256.848); /* slate-700 */
+  --sidebar-accent-foreground: oklch(0.985 0.002 256.848); /* slate-50 */
+  --sidebar-border: oklch(0.35 0.013 256.848); /* slate-600 */
+  --sidebar-ring: oklch(0.693 0.178 257.418); /* blue-400 */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
